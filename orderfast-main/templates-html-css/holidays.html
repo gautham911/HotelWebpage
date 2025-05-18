@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continental Holidays - The Continental Hotel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('/images/555522a_hb_p_004.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0.5rem 0;
+            font-family: 'Georgia', serif;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        main {
+            padding: 2rem;
+            flex: 1;
+        }
+
+        .booking-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .booking-container {
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            color: #ffdd00;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .date-selection, .guest-details, .user-details {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            display: block;
+            font-family: 'Georgia', serif;
+            font-size: 1rem;
+            color: #000000;
+        }
+
+        input[type="date"], input[type="number"], input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            display: none;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enjoy Your Holidays at The Continental</h1>
+    </header>
+    <main>
+        <section class="booking-section">
+            <div class="booking-container">
+                <h3>Book Your Stay</h3>
+                <form id="booking-form" action="bookingsuccessful.html" method="post">
+                    <div class="destination-selection">
+                    <div class="date-selection">
+                        <label for="checkin">Check In</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                        
+                        <label for="checkout">Check Out</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                    <div class="guest-details">
+                        <label for="guests">Guests</label>
+                        <input type="number" id="guests" name="guests" min="1" max="10" required>
+                    </div>
+                    <div class="user-details">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Mobile Number</label>
+                        <input type="tel" id="phone" name="phone" pattern="\d+" title="Please enter a valid phone number consisting of digits only" required>
+
+                        <input type="radio" name="city" value="NYC" id="nyc" required>
+                        <label for="nyc">NYC</label required>
+
+                        <input type="radio" name="city" value="LA" id="la" required>
+                        <label for="la">LA</label>
+                    </div>
+                    <button type="submit">Book Now</button required>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 The Continental Hotel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            window.location.href = 'bookingsuccessful.html';
+        });
+    </script>
+</body>
+</html>
