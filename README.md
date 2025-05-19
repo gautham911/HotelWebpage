@@ -11,26 +11,40 @@ This is a simple website design for **The Continental Hotels**, showcasing dishe
 ##  Project Structure
 
 orderfast-main/
-│
-├── images/                    # Folder for all images and videos
-│   ├── applepie.aivf
-│   ├── beefburgers.aivf
-│   ├── mojito.aivf
-│   ├── bloodymary.aivf
-│   ├── ...
-│   └── ...
-│
-├── templates/                 # Folder containing all template (HTML/CSS) files
-│   ├── index.html             # Homepage
-│   ├── dishes.html            # Dishes page
-│   ├── drinks.html            # Drinks page
-│   ├── desserts.html          # Desserts page
-│   ├── contact.html           # Contact page
-│   ├── holidays.html          # Booking page
-│   ├── ...             
-│   └── ...
-│
-└── README.md                  # Project documentation
+
+  images/ – Folder for all images and videos
+
+    applepie.aivf
+
+    beefburgers.aivf
+
+    mojito.aivf
+
+    bloodymary.aivf
+
+    ...
+
+templates-html-css/ – Folder containing all HTML and CSS files
+
+  index.html – Homepage
+
+  about.html – About the Continental
+
+  destination.html – Destination information
+
+  holidays.html – Holidays booking page
+
+  dishes.html – Dishes page
+
+  drinks.html – Drinks page
+
+  desserts.html – Desserts page
+
+  contact.html – Contact page
+
+  bookingsuccessful.html – Booking confirmation page
+
+  README.md – Project documentation
 
 
 ##  Features
